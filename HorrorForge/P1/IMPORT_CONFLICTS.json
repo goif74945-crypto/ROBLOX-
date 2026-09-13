@@ -1,8 +1,0 @@
-{
-  "schema":"HORRORFORGE_IMPORT_CONFLICTS_v1",
-  "historical_note":"These conflicts were detected before import. The repository contains the local canonical P1 content for these paths in the staging commit; this record documents the pre-existing GitHub versions and the intentional canonical-source replacement.",
-  "conflicts":[
-    {"path":"HorrorForge/P1/default.project.json","pre_import_github_sha":"f46fa1570aa13c402d331d3ddd88fce81957ed74","local_sha256":"efac040acdbdb12c9960cd6da496961d58e409225bd57415dfdba84b9e5c9044"},
-    {"path":"HorrorForge/P1/src/shared/P1/P1Config.lua","pre_import_github_sha":"d20f9a4dc6d1b21e9a52e89eccab6927900aa827","local_sha256":"ef9397562903f50bd85950eb1e78af339e492727c55c1a4407675a338e11b5ff"}
-  ]
-}

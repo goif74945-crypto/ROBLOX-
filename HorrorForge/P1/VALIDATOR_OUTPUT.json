@@ -1,5 +1,0 @@
-{
-  "exit_code": 0,
-  "checks": {"required_services":true,"no_empty_lua":true,"forbidden_tokens":true,"remote_manifest_nonempty":true},
-  "note":"Static validator regenerated from the current local source state."
-}
