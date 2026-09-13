@@ -1,0 +1,31 @@
+{
+  "name": "HORRORFORGE-X100",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Shared": {"$path": "src/shared"}
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "HORRORFORGE_SERVER": {"$path": "src/server"}
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "HORRORFORGE_CLIENT": {"$path": "src/client"}
+      }
+    },
+    "ServerStorage": {"$className": "ServerStorage"},
+    "Workspace": {
+      "$className": "Workspace",
+      "Map": {"$className": "Folder"},
+      "Interactive": {"$className": "Folder"},
+      "SpawnPoints": {"$className": "Folder"},
+      "EntitySpawns": {"$className": "Folder"},
+      "Extraction": {"$className": "Folder"},
+      "Runtime": {"$className": "Folder"}
+    }
+  }
+}
