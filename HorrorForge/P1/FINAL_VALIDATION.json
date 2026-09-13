@@ -1,0 +1,35 @@
+{
+  "source_state": {
+    "algorithm": "sha256",
+    "file_count": 126,
+    "digest": "381371fe5d0cb1f7240492ca114a32b0615e7e321d3014d1e694e3aadacccb2d"
+  },
+  "counts": {
+    "lua_files": 116,
+    "server_services": 50,
+    "client_controllers": 14,
+    "ui_screens": 21,
+    "manifest_entries": 116,
+    "changed_from_x100": 51,
+    "remote_manifest_entries": 15,
+    "remote_request_constants": 10
+  },
+  "checks": {
+    "filesystem_manifest": {"pass": true, "evidence": {"lua_count": 116, "manifest_count": 116, "missing": [], "extra": []}},
+    "require_graph": {"pass": true, "evidence": {"broken": [], "dynamic_requires": [{"file":"src/client/Bootstrap.client.lua","expr":"module"},{"file":"src/server/Bootstrap.server.lua","expr":"module"}]}},
+    "geometry_reachability": {"pass": true, "evidence": {"south_w_center_x":14.5,"south_w_size_x":7.0,"south_e_center_x":25.5,"south_e_size_x":7.0,"player_route_gap":4.0,"crate_center_x":20.0,"crate_center_z":-25.0,"south_wall_z":-18.0,"gap_width":4.0,"reachability_proof":true}},
+    "validation_artifacts_current": {"pass": true},
+    "death_bounded_loss": {"pass": true, "evidence": {"inventory":true,"resources":true,"fraction":true,"route_advantage":true}},
+    "persistence_hydration": {"pass": true},
+    "movement_authority": {"pass": true},
+    "search_duration": {"pass": true},
+    "e01_signature": {"pass": false, "evidence": {"timing":true,"server_cue":true,"counterplay_noise":true,"counterplay_los":true,"door_counterplay_present":false,"reason":"P1 scope contains no canonical door interaction; adding one would violate scope lock"}},
+    "remote_coverage": {"pass": true},
+    "placeholder_tokens": {"pass": true, "evidence": {"violations":[]}},
+    "duplicate_definition_ids": {"pass": false, "evidence": {"duplicates":["CARRIER","ENGINEER","GUIDE","MEDIC","SCOUT","SIGNALIST"],"definition_id_count":64}}
+  },
+  "e01_status":"INCOMPLETE_BY_SCOPE_EVIDENCE",
+  "runtime_validation":"PENDING — no Roblox Studio/Luau runtime in this environment",
+  "status":"BLOCKED",
+  "implementation_blockers":["E01_CANONICAL_COUNTERPLAY"]
+}
