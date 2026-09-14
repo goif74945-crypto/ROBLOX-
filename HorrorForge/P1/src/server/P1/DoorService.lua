@@ -1,7 +1,5 @@
 local DoorService = {}
 
-local lastInteraction = {}
-
 local function getOrCreateDoor(config)
     local interactive = workspace:FindFirstChild("Interactive")
     if not interactive then
@@ -36,7 +34,6 @@ function DoorService.Initialize(config, traceService)
         prompt.ActionText = "Interact"
         prompt.ObjectText = "Door"
         prompt.HoldDuration = 0
-        prompt.MaxActivationDistance = config.Door.MaxDistance
         prompt.Parent = door
     end
 
@@ -50,16 +47,9 @@ function DoorService.Initialize(config, traceService)
             return
         end
 
-        if (root.Position - door.Position).Magnitude > config.Door.MaxDistance then
+        if (root.Position - door.Position).Magnitude > prompt.MaxActivationDistance then
             return
         end
-
-        local t = workspace:GetServerTimeNow()
-        local previous = lastInteraction[player] or 0
-        if t - previous < config.Door.CooldownSeconds then
-            return
-        end
-        lastInteraction[player] = t
 
         local current = door:GetAttribute("P1_DoorState")
         local nextState = current == "OPEN" and "CLOSED" or "OPEN"
