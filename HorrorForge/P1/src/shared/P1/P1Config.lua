@@ -27,6 +27,12 @@ local P1Config = {
         Lifetime = 30,
         MaxPerPlayer = 40,
     },
+    Door = {
+        Name = "P1_CANONICAL_DOOR",
+        InteractionId = "P1_DOOR_INTERACT",
+        MaxDistance = 12,
+        CooldownSeconds = 0.4,
+    },
     Evidence = {
         SearchDistance = 12,
         SearchDuration = 1.5,
