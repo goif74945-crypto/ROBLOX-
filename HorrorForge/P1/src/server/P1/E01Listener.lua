@@ -67,6 +67,8 @@ local function makeEntity(spawnPosition)
     humanoid.Parent = model
 
     model.PrimaryPart = root
+    root:SetNetworkOwner(nil)
+    body:SetNetworkOwner(nil)
     model.Parent = workspace
     return model, humanoid, root
 end
@@ -183,7 +185,9 @@ function E01Listener.Start(config, traceService)
                     if targetRoot then
                         local distance = (targetRoot.Position - root.Position).Magnitude
                         if distance <= config.Listener.AttackRange then
-                            setState(STATES.ATTACK)
+                            if state ~= STATES.ATTACK then
+                                setState(STATES.ATTACK)
+                            end
                             local targetHumanoid = targetPlayer.Character and targetPlayer.Character:FindFirstChildOfClass("Humanoid")
                             if targetHumanoid and t - lastStateChange >= config.Listener.AttackCooldown then
                                 targetHumanoid:TakeDamage(config.Listener.MaxHealthDamage)
