@@ -1,0 +1,2 @@
+-- P1 client boundary.
+-- Consequential door, trace, and E01 state are server-authoritative.
